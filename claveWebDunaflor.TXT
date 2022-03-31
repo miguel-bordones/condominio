@@ -1,0 +1,68 @@
+
+mmbordonesm65@gmail.com
+
+Sarita2106
+
+
+Clave de sitio Web Dunaflor 000webthost
+B^y8pGT#UH)f1a2U6Kjf   clave FTP
+Servidor files.000webhost.com
+usuario dunaflor
+
+base de datos   id16086829_condominio
+usuario id16086829_dunaflor
+
+
+ultima clave  )-GLf$X%Bf&QoB4z  de base dato
+
+
+
+
+use condominio;
+
+select sum(gacm_mt_gasto) from gastos_conserje_mensual
+where   MONTH(GACM_FE_GASTO)  = '12'   AND YEAR(GACM_FE_GASTO) = '2020';
+
+
+select count(*)  from gastos_admin_mensual
+where   MONTH(GADM_FE_GASTO)  = '12'   AND YEAR(GADM_FE_GASTO) = '2020' AND
+GADM_CD_EDIFICIO  = 1 AND 
+GADM_CD_GASTO = 300;
+
+select * from edificio;
+
+
+select sum(gagm_mt_gasto) , GAGM_FE_GASTO from gastos_general_mensual
+where   MONTH(GAGM_FE_GASTO)  = '12'   AND YEAR(GAGM_FE_GASTO) = '2020';
+
+select * from gastos_admin_mensual
+where GADM_FE_GASTO = '2020-12-30';
+
+select SA_MT_ANO_ANTERIOR from SALDO_PROPIETARIOS
+where SA_ANO = 2021;
+
+SET SQL_SAFE_UPDATES = 0;
+
+DELETE FROM  SALDO_PROPIETARIOS
+where SA_ANO = 2021;
+
+SELECT *
+   FROM recibosmov
+WHERE RECI_CD_EDIFICIO = 1 AND
+	  RECI_NU_TORRE = 1 AND
+      MONTH(RECI_FE_RECIBO)  = 10 AND YEAR(RECI_FE_RECIBO) = 2020 AND
+      RECI_NU_DEPTO = '7B'
+      ORDER BY RECI_CD_GASTO;
+
+select GAMI_CD_GASTO from gastos_admin
+order by GAMI_CD_GASTO;
+where 
+
+select GCON_CD_GASTO from gastos_conserje
+where rownum <= 5;
+
+where GCON_CD_GASTO = (select GCON_CD_GASTO from gastos_conserje)
+
+
+
+
